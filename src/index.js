@@ -3,11 +3,27 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// import Clock from './useStateAssignment/Clock';
+// import Welcome from './ConditionalAssignment/Welcome';
+// import Home from './Question 3/Home';
+// import Count from './useState/Count';
+// import Car from './useStateAssignment/Car';
+// import Sample from './EventHandling/Sample';
+// import MultipleInput from './EventHandling/MultipleInputs';
+// import Question1 from './MultipleInputsAssignment/Question1';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <App /> 
+    {/* <Home />  */}
+    {/* <Welcome /> */}
+    {/* <Count /> */}
+    {/* <Clock /> */}
+    {/* <Car /> */}
+    {/* <Sample /> */}
+    {/* <MultipleInput/> */}
+    {/* <Question1 /> */}
   </React.StrictMode>
 );
 

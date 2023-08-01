@@ -1,0 +1,34 @@
+*{
+    background-color: cyan;
+}
+.shows{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shows h1{
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+ .shows button{
+    padding: 10px 15px;
+    color: white;
+    cursor: pointer;
+    background-color: red;
+    font-size: 30px;
+    font-weight: bold;
+    border: 2px solid red;
+    border-radius: 10px;
+
+ }
+
+ .shows button:active{
+    background-color: rgb(180, 24, 24);
+ }
+
+ .shows button:active{
+    transform: scale(0.88);
+ }
