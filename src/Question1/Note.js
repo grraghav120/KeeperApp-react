@@ -2,12 +2,21 @@ import React from "react";
 import "../App.css";
 
 function Note(props) {
+  
+  function deleteNote(event){
+    console.log(props.id);
+    let updateArray=[];
+    props.arr.filter((x)=>{
+      if(x.id!==props.id) updateArray.push(x);
+    })
+    props.notesArr(updateArray)
+  }
   return (
     <div className="note">
-      <h1>This is the note {props.title}</h1>
-      <p>This is the note {props.content}</p>
-      <div className="delete-btn">
-        <button>Delete</button>
+      <h1>{props.title}</h1>
+      <p>{props.content}</p>
+      <div>
+        <button onClick={deleteNote}>Delete</button>
       </div>
     </div>
   );

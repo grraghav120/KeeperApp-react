@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import '../App.css';
-import notes from "./notesAll";
 
-function NoteAdd() {
+function NoteAdd(props) {
   let [note,setNote]=useState({
     title:"",
     content:""    
   });
 
-  let [noteall,setNotes]=useState(notes);
 
   function handleInput(event){
     let {name,value}=event.target;
@@ -19,15 +17,12 @@ function NoteAdd() {
   }
 
   function onAddNote(event){
-    console.log(note);
-    let newNote={
+    const newNote={
       id:new Date().getTime(),
       title:note.title,
       content:note.content
     }
-    console.log(noteall);
-    notes.push(newNote);
-    setNotes(notes);
+    props.noteData(newNote)
     event.preventDefault();
   }
 

@@ -4,7 +4,7 @@ import "./App.css";
 import Header from "./Question1/Header";
 import Footer from "./Question1/Footer";
 import Note from "./Question1/Note"
-import notes from "./Question1/notesAll.js";
+// import notes from "./Question1/notesAll.js";
 import NoteAdd from "./Question1/NoteAdd";
 import { useState } from "react";
 // import Card from "./Question2/Card";
@@ -15,12 +15,23 @@ import { useState } from "react";
 // import HeadingEmoji from './MappingAssignment/HeadingEmoji';
 
 function App() {
+
+  let [notes,setNotes]=useState([]);
+
+  function addNote(singleNote){
+    setNotes([...notes,singleNote]);
+  }
+
+  function deleteNote(updateArr){
+    setNotes(updateArr);
+  }
+
   return (
     <div>
       <Header />
-      <NoteAdd />
+      <NoteAdd noteData={addNote} />
       {notes.map((note) => (
-        <Note key={note.id} title={note.title} content={note.content} />
+        <Note key={note.id} notesArr={deleteNote} arr={notes} id={note.id} title={note.title} content={note.content} />
       ))}
       <Footer />
     </div>

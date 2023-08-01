@@ -66,19 +66,6 @@ footer p {
   color:blue;
 }
 
-.delete-btn button{
-  color: rgb(115, 115, 5);
-  background-color: white;
-  border: 1px white solid;
-  padding: 8px 8px;
-}
-
-.delete-btn button:hover{
-  cursor: pointer;
-  border: 2px red solid;
-  border-radius: 8px;
-}
-
 form {
   position: relative;
   width: 480px;
